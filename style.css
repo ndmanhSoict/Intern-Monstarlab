@@ -1,0 +1,131 @@
+.pricing-table {
+    /* background-color: brown; */
+    display: flex;
+    width: 1189px;
+    height: 823px;
+    justify-content: center;
+    gap: 5px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: Source Sans Pro;
+}
+
+.plan {
+    margin-top: 60px;
+    flex: 1;
+    color: #333;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DFE5E8;
+}
+
+.price-new {
+    display: flex;
+    flex-direction: row;
+}
+
+.shape-new {
+    position: absolute;
+    margin-left: 148px;
+    top: -33px;
+}
+
+.price-circle {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -60px;
+    background: #393D50;
+    border-radius: 50%;
+    margin-left: 44px;
+    font-size: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* z-index: 10; */
+    /* font-family: Source Sans Pro; */
+}
+
+.per {
+    color: #99A9B5;
+    font-size: 16px;
+}
+
+.price-num {
+    font-size: 32px;
+    color: #04D7F2;
+    /* z-index: 10; */
+    align-items: center;
+}
+
+.price-plan {
+    height: 272px;
+    top: 60px;
+    background-color: #00BCD4;
+    font-family: Montserrat;
+    color: #FFFFFF;
+}
+
+.plan-title {
+    padding-top: 120px;
+    padding-left: 47px;
+    font-size: 32px;
+    line-height: 54px;
+}
+
+.plan-title-advance {
+    padding-top: 85px;
+    padding-left: 47px;
+    font-size: 32px;
+    line-height: 54px;
+}
+
+.subtitle {
+    background: #fff;
+    color: #666;
+    /* font-family: Source Sans Pro; */
+    padding: 20px 0px 20px 47px;
+}
+
+.subtitle-first {
+    font-size: 24px;
+    line-height: 37px;
+}
+
+.subtitle-second {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+
+
+.custom-list-items {
+    display: flex;
+    flex-direction: row;
+    padding-left: 47px;
+    line-height: 52px;
+    font-size: 16px;
+    align-items: center;
+
+}
+
+.custom-list-items img {
+    width: 13px;
+    height: 13px;
+    margin-right: 30px;
+}
+
+.order-btn {
+    margin: 50px 0 0 51px;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: none;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-family: Montserrat;
+    letter-spacing: 0.95px;
+    font-weight: bolder;
+}
