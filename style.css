@@ -52,6 +52,7 @@
 
 .container-header-wrapper {
     position: sticky;
+    padding: 0 7%;
     top: 0;
     background-color: #fff;
     z-index: 999;
@@ -906,9 +907,10 @@ nav {
 }
 
 @media (max-width: 600px) {
-    .footer-container{
+    .footer-container {
         margin-top: 220px;
     }
+
     .footer-content-wrapper {
         margin-top: -150px;
     }
