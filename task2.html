@@ -29,28 +29,30 @@
         <i class="fa-solid fa-xmark"></i>
     </div>
     <main class="container">
-        <header class="container-header">
-            <div class="logo">
-                <p>SHOP.CO</p>
-            </div>
-            <nav>
-                <ul class="nav-links-header">
-                    <li><a href="#">Shop <i class='fas fa-angle-down'></i></a></li>
-                    <li><a href="#">On Sale</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Brands</a></li>
-                </ul>
-            </nav>
-            <div class="search-bar">
-                <i class='fas fa-search'></i>
-                <input type="text" placeholder="Search for products...">
-            </div>
-            <div class="icon-header">
-                <div class="search-icon"></div>
-                <div class="shopping-cart-icon"></div>
-                <div class="account-icon"></div>
-            </div>
-        </header>
+        <div class="container-header-wrapper">
+            <header class="container-header">
+                <div class="logo">
+                    <p>SHOP.CO</p>
+                </div>
+                <nav>
+                    <ul class="nav-links-header">
+                        <li><a href="#">Shop <i class='fas fa-angle-down'></i></a></li>
+                        <li><a href="#">On Sale</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Brands</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar">
+                    <i class='fas fa-search'></i>
+                    <input type="text" placeholder="Search for products...">
+                </div>
+                <div class="icon-header">
+                    <div class="search-icon"></div>
+                    <div class="shopping-cart-icon"></div>
+                    <div class="account-icon"></div>
+                </div>
+            </header>
+        </div>
         <hr>
         <nav class="nav-links">
             <h3>Home</h3>
@@ -58,10 +60,12 @@
             <h3 class="selected">Casual</h3>
         </nav>
         <div class="main-content">
-            <aside class="filter-section">
+            <div id="overlay"></div>
+            <aside class="filter-section" id="filter-section">
                 <div class="filter-details">
                     <h4>Filter</h4>
                     <div class="filter-1-icon"></div>
+                    <i class="fa-solid fa-xmark" id="close-filter-btn"></i>
                 </div>
                 <hr>
                 <section>
@@ -157,9 +161,9 @@
                                 <option value="newest">Newest</option>
                             </select>
                         </div>
-                        <div class="filter-icon-small-wrapper">
+                        <button class="filter-icon-small-wrapper" id="open-close-filter-btn">
                             <div class="filter-icon-small"></div>
-                        </div>
+                        </button>
                     </div>
                 </header>
                 <div class="grid-products">
@@ -344,20 +348,21 @@
                 </div>
             </div>
         </div>
-        <div class="newletters">
-            <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
-            <div class="newletters-right">
-                <div class="input-wrapper">
-                    <input type="email" placeholder="Enter your email address">
-                    <div class="email-icon">
-                    </div>
-                </div>
-                <button>Subscribe to Newsletter</button>
-            </div>
-        </div>
+
     </main>
     <footer>
         <div class="footer-container">
+            <div class="newletters">
+                <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+                <div class="newletters-right">
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="Enter your email address">
+                        <div class="email-icon">
+                        </div>
+                    </div>
+                    <button>Subscribe to Newsletter</button>
+                </div>
+            </div>
             <div class="footer-content">
                 <div class="footer-content-wrapper">
                     <div class="footer-content-left">
@@ -444,6 +449,33 @@
             </div>
         </div>
     </footer>
+    <script>
+        const filterSection = document.getElementById('filter-section');
+        const overlay = document.getElementById('overlay');
+
+        document.getElementById('open-close-filter-btn').addEventListener('click', function () {
+            filterSection.classList.toggle('open');
+            overlay.classList.toggle('active');
+        });
+
+        document.getElementById('close-filter-btn').addEventListener('click', function () {
+            filterSection.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', function () {
+            filterSection.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 915) {
+                document.getElementById('filter-section').classList.remove('open');
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 
 </html>
