@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Integral CF Bold';
+            src: url('integralcf-bold.otf') format('opentype');
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="noti-signup">
+        <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="container-header-wrapper">
+        <header class="container-header">
+            <div class="logo">
+                <div class="hamberger-icon"></div>
+                <p>SHOP.CO</p>
+            </div>
+            <nav>
+                <ul class="nav-links-header">
+                    <li><a href="#">Shop <i class='fas fa-angle-down'></i></a></li>
+                    <li><a href="#">On Sale</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Brands</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <i class='fas fa-search'></i>
+                <input type="text" placeholder="Search for products...">
+            </div>
+            <div class="icon-header">
+                <div class="search-icon"></div>
+                <div class="shopping-cart-icon"></div>
+                <div class="account-icon"></div>
+            </div>
+        </header>
+    </div>
+    <main class="container">
+
+        <hr>
+        <nav class="nav-links">
+            <h3>Home</h3>
+            <i class='fas fa-angle-right'></i>
+            <h3 class="selected">Casual</h3>
+        </nav>
+        <div class="main-content">
+            <div id="overlay"></div>
+            <aside class="filter-section" id="filter-section">
+                <div class="filter-details">
+                    <h4>Filter</h4>
+                    <div class="filter-1-icon"></div>
+                    <i class="fa-solid fa-xmark" id="close-filter-btn"></i>
+                </div>
+                <hr>
+                <section>
+                    <ul class="list-categories">
+                        <li><span>Tshirts</span><i class='fas fa-angle-right'></i></li>
+                        <li><span>Shirts</span><i class='fas fa-angle-right'></i></li>
+                        <li><span>Shorts</span><i class='fas fa-angle-right'></i></li>
+                        <li><span>Hoodies</span><i class='fas fa-angle-right'></i></li>
+                        <li><span>Jeans</span><i class='fas fa-angle-right'></i></li>
+                    </ul>
+                </section>
+                <hr>
+                <section class="filter-price">
+                    <div class="filter-details">
+                        <h5>Price</h5>
+                        <i class='fas fa-angle-up'></i>
+                    </div>
+                    <div class="price-range">
+                        <div class="price-track">
+                            <div class="price-track-active"></div>
+                            <div class="price-circle left"></div>
+                            <div class="price-circle right"></div>
+                        </div>
+                        <div class="price-values">
+                            <span class="min-price">$50</span>
+                            <span class="max-price">$200</span>
+                        </div>
+                    </div>
+                </section>
+                <hr>
+                <section class="filter-color">
+                    <div class="filter-details">
+                        <h5>Color</h5>
+                        <i class='fas fa-angle-up'></i>
+                    </div>
+                    <div class="color-options">
+                        <button class="color-option green"></button>
+                        <button class="color-option red"></button>
+                        <button class="color-option yellow"></button>
+                        <button class="color-option orange"></button>
+                        <button class="color-option lightblue"></button>
+                        <button class="color-option blue"><i class='fas fa-check selected'></i></button>
+                        <button class="color-option purple"></button>
+                        <button class="color-option pink"></button>
+                        <button class="color-option white"></button>
+                        <button class="color-option black"></button>
+                    </div>
+                </section>
+                <hr>
+                <section class="filter-size">
+                    <div class="filter-details">
+                        <h5>Size</h5>
+                        <i class='fas fa-angle-up'></i>
+                    </div>
+                    <div class="size-options">
+                        <button class="size-option">XX-Small</button>
+                        <button class="size-option">X-Small</button>
+                        <button class="size-option">Small</button>
+                        <button class="size-option">Medium</button>
+                        <button class="size-option">Large</button>
+                        <button class="size-option selected">X-Large</button>
+                        <button class="size-option">XX-Large</button>
+                        <button class="size-option">3X-Large</button>
+                        <button class="size-option">4X-Large</button>
+                    </div>
+                </section>
+                <hr>
+                <section class="filter-style">
+                    <div class="filter-details">
+                        <h5>Dress Style</h5>
+                        <i class='fas fa-angle-up'></i>
+                    </div>
+                    <ul class="list-categories">
+                        <li><span>Casual</span><i class='fas fa-angle-right'></i></li>
+                        <li><span>Formal</span><i class='fas fa-angle-right'></i></li>
+                        <li><span>Party</span><i class='fas fa-angle-right'></i></li>
+                        <li><span>Gym</span><i class='fas fa-angle-right'></i></li>
+                    </ul>
+                </section>
+                <button class="btn-apply-filter">Apply Filter</button>
+            </aside>
+            <div class="content-area">
+                <header class="content-area-header">
+                    <h1>Casual</h1>
+                    <div class="result-search">
+                        <span class="total-results">Showing 1-10 of 100 results</span>
+                        <div class="sort-by">
+                            <span>Sort by:</span>
+                            <select>
+                                <option value="default">Most popular</option>
+                                <option value="price-low-high">Low to High</option>
+                                <option value="price-high-low">High to Low</option>
+                                <option value="newest">Newest</option>
+                            </select>
+                        </div>
+                        <button class="filter-icon-small-wrapper" id="open-close-filter-btn">
+                            <div class="filter-icon-small"></div>
+                        </button>
+                    </div>
+                </header>
+                <div class="grid-products">
+                    <div class="product-card">
+                        <img class="product-img" src="image1.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Gradient Graphic T-shirt</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class="fas fa-star-half"></i>
+                                <p>3.5/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$145</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-img" src="image2.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Polo with Tipping Details</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class="fas fa-star-half"></i>
+                                <p>4.5/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$180</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-img" src="image3.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Black Striped T-shirt</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <p>5.0/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$120</p>
+                                <p class="product-old-price">$150</p>
+                                <p class="product-discount">-30%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-img" src="image4.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Skinny Fit Jeans</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class="fas fa-star-half"></i>
+                                <p>3.5/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$240</p>
+                                <p class="product-old-price">$260</p>
+                                <p class="product-discount">-20%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-img" src="image5.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Checkered Shirt</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class="fas fa-star-half"></i>
+                                <p>4.5/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$180</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-img" src="image6.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Sleeve Striped T-shirt</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class="fas fa-star-half"></i>
+                                <p>4.5/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$130</p>
+                                <p class="product-old-price">$160</p>
+                                <p class="product-discount">-30%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-img" src="image7.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Vertical Striped Shirt</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <p>5.0/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$212</p>
+                                <p class="product-old-price">$232</p>
+                                <p class="product-discount">-20%</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-img" src="image8.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Courage Graphic T-shirt</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <p>4.0/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$145</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img class="product-img" src="image9.png" alt="Product Image">
+                        <div class="product-info">
+                            <h3 class="product-name">Loose Fit Bermuda Shorts</h3>
+                            <div class="product-feedback">
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <i class='fas fa-star'></i>
+                                <p>3.0/5</p>
+                            </div>
+                            <div class="product-price-wrapper">
+                                <p class="product-price">$80</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="pagination">
+                    <button class="prev-page"><i class='fas fa-arrow-left'></i> Previous</button>
+                    <ul class="page-numbers">
+                        <li class="page-number selected">1</li>
+                        <li class="page-number">2</li>
+                        <li class="page-number">3</li>
+                        <li class="page-number-dot">...</li>
+                        <li class="page-number">4</li>
+                        <li class="page-number">5</li>
+                    </ul>
+                    <button class="next-page">Next <i class='fas fa-arrow-right'></i></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="newletters">
+                <p>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
+                <div class="newletters-right">
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="Enter your email address">
+                        <div class="email-icon">
+                        </div>
+                    </div>
+                    <button>Subscribe to Newsletter</button>
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="footer-content-wrapper">
+                    <div class="footer-content-left">
+                        <p class="footer-logo">SHOP.CO</p>
+                        <span>We have clothes that suits your style and which you’re proud to wear. From women to
+                            men.</span>
+                        <div class="footer-socials">
+                            <div class="footer-socials-icon">
+                                <i class='fab fa-twitter'></i>
+                            </div>
+                            <div class="footer-socials-icon bg-black">
+                                <i class='fab fa-facebook-f' style="color: #fff"></i>
+                            </div>
+                            <div class="footer-socials-icon">
+                                <i class='fab fa-instagram'></i>
+                            </div>
+                            <div class="footer-socials-icon">
+                                <i class='fab fa-github'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-more-info">
+                        <div class="footer-section">
+                            <h5>COMPANY</h5>
+                            <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#works">Works</a></li>
+                                <li><a href="#career">Career</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>HELP</h3>
+                            <ul>
+                                <li><a href="#support">Customer Support</a></li>
+                                <li><a href="#delivery">Delivery Details</a></li>
+                                <li><a href="#terms">Terms & Conditions</a></li>
+                                <li><a href="#privacy">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>FAQ</h3>
+                            <ul>
+                                <li><a href="#account">Account</a></li>
+                                <li><a href="#deliveries">Manage Deliveries</a></li>
+                                <li><a href="#orders">Orders</a></li>
+                                <li><a href="#payments">Payments</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-section">
+                            <h3>RESOURCES</h3>
+                            <ul>
+                                <li><a href="#ebooks">Free eBooks</a></li>
+                                <li><a href="#tutorial">Development Tutorial</a></li>
+                                <li><a href="#blog">How to - Blog</a></li>
+                                <li><a href="#playlist">YouTube Playlist</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <div class="footer-bottom">
+                <p> Shop.co &copy; 2000-2023, All Rights Reserved</p>
+                <div class="footer-payment">
+                    <div class="payment-wrapper">
+                        <div class="visa-svg"></div>
+                    </div>
+                    <div class="payment-wrapper">
+                        <div class="mastercard-svg"></div>
+                    </div>
+                    <div class="payment-wrapper">
+                        <div class="paypal-svg"></div>
+                    </div>
+                    <div class="payment-wrapper">
+                        <div class="apay-svg"></div>
+                    </div>
+                    <div class="payment-wrapper">
+                        <div class="gpay-svg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const filterSection = document.getElementById('filter-section');
+        const overlay = document.getElementById('overlay');
+
+        document.getElementById('open-close-filter-btn').addEventListener('click', function () {
+            filterSection.classList.toggle('open');
+            overlay.classList.toggle('active');
+        });
+
+        document.getElementById('close-filter-btn').addEventListener('click', function () {
+            filterSection.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', function () {
+            filterSection.classList.remove('open');
+            overlay.classList.remove('active');
+        });
+
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 915) {
+                document.getElementById('filter-section').classList.remove('open');
+                overlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
